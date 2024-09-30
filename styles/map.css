@@ -1,0 +1,111 @@
+body {
+    background-image: url('../images/monuments.jpeg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: bottom -120px center;
+    background-repeat: no-repeat;
+}
+
+body::before { /*Le pseudo-élément ::before est une technique CSS très puissante qui vous permet d'ajouter du contenu avant le contenu réel d'un élément.*/
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9); /* Couleur blanche avec 50% d'opacité */
+    z-index: -1; /* Assurez-vous que le pseudo-élément est au-dessus de l'image de fond */
+}
+
+
+.grid-continents {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    transform: translateY(-10px);
+    margin:0;
+    padding:0;
+}
+
+.grid-continents a {
+    display:inline-block; /*le lien s'adapte à la longueur de son contenu*/
+    width:auto;                       /* Les liens prennent autant d'espace que possible */
+    text-align: center;            /* Centre le texte des liens */
+    font-size:110%;
+    border:2px solid black;
+    border-radius: 20px 8px 20px 8px;
+    margin:10px 30px;
+    padding:10px 15px;
+    background-color: #FED3C2;
+}
+
+.select-box {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+select {
+    display:inline-block;   /*le lien s'adapte à la longueur de son contenu*/
+    width:30%;                       /* Les liens prennent autant d'espace que possible */
+    text-align: center;            /* Centre le texte des liens */
+    font-family:"Baloo", serif;
+    font-weight:400;
+    font-size:20px;
+    color:black;
+    border:2px solid black;
+    border-radius: 20px 8px 20px 8px;
+    margin:0 30px 20px 30px;
+    padding:10px 15px;
+    background-color: #FED3C2;
+}
+
+select option {
+    border:2px solid black;
+    transform: translateX(67%);
+}
+
+.grid-continents a:hover {
+    box-shadow: 3px 3px 10px black;
+}
+
+.memory-section {
+    width: 40%; /* Largeur fixe du "carré" */
+    padding:0 25px;
+    border: 3px solid black; /* Ajoute une bordure pour délimiter les sections */
+    border-radius: 30px 12px;
+    background: radial-gradient(circle, white 30%, #FED3C2 70%);
+    box-sizing: border-box; /* Inclut les padding et bordures dans la largeur totale */
+    margin:0 auto;
+    overflow: hidden; /* Évite que le contenu déborde du conteneur */
+    display: flex;
+    flex-direction: column; /* Pour aligner les éléments verticalement */
+}
+
+.pictures-map {
+    max-width: 50%; /* Assure que l'image ne dépasse pas la largeur du conteneur */
+    height: auto; /* Maintient les proportions de l'image */
+    border-radius: 24px 8px;
+    border:2px solid black;
+}
+
+.best-moment {
+    margin-bottom: 25px;
+    word-wrap: break-word; /* Gère les mots longs pour qu'ils ne débordent pas */
+}
+
+.picture-line {
+    border: none; /* Supprime la bordure par défaut */
+    border-top: 3px solid #ccc; /* Ajoute une bordure supérieure pour créer la ligne */
+    width: 50%; /* Ligne pleine largeur */
+    margin-top:50px;
+    margin-bottom:50px;
+}
+
+.top-line {
+    border: none; /* Supprime la bordure par défaut */
+    border-top: 3px solid #ccc; /* Ajoute une bordure supérieure pour créer la ligne */
+    width: 50%; /* Ligne pleine largeur */
+    margin: 12px auto 33px auto;
+    background-color: black;
+    display: block;
+}
+

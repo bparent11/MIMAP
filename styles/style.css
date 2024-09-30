@@ -1,0 +1,247 @@
+@font-face {
+    font-family: 'Baloo';
+    src: url('../fonts/Baloo-Regular.ttf');
+}
+
+.test {
+    background-color: black;
+}
+
+html {
+    height:100%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+body {
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin:0;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1; /* Le main prend l'espace restant */
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header,
+footer {
+    background-color: #FED3C2;
+    flex-shrink: 0; /* Empêche le header et le footer de rétrécir */
+}
+
+header {
+    position:relative;
+    top:0;
+    left:0;
+    width:100%;
+    text-align: center; /* Centre le texte à l'intérieur du header */
+    z-index: 1000;   /* Assure que le header est au-dessus des autres éléments */
+    border-bottom: 2px solid black;
+}
+
+header nav {
+    display: grid;
+    grid-template-columns: 1fr 3fr auto 3fr 1fr;
+    place-items:center;
+}
+
+header nav a:not(:second-child) {
+    width: 20%;
+}
+
+header nav .logo-box {
+    flex: 0;                       /* L'image ne prend pas d'espace flexible */
+    margin: 0 20px;                /* Marge pour espacer l'image des liens */
+}
+
+.logo-logout {
+    width:32px;
+    height:32px;
+    place-items: left; /* Ou center si vous voulez centrer le logo dans sa colonne */
+}
+
+.logout-button {
+    border:none;
+    background: none;
+    padding:0;
+}
+
+.logout-button:hover {
+    cursor: pointer;    
+}
+
+.nav {
+    background-color: white;
+    font-size: 15px;
+    border-radius: 20px 8px 20px 8px;
+    border: 1px solid black;
+    padding: 8px 20px 8px 20px;
+    margin: 20px 0 20px 0;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav:hover {
+    box-shadow: 3px 3px 10px black;
+    border: 2px solid black;
+}
+
+h1 {
+    font-family: "Baloo", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    line-height:1;
+    margin:30px 0;
+}
+
+h2 {
+    font-family: "Baloo", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 23px;
+    color: black;
+    text-align: center;
+    line-height:1;
+    margin-top:30px;
+}
+
+h3 {
+    font-family: "Baloo", serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    line-height:1;
+}
+
+
+p {
+    color:black;
+    font-size: 15px;
+    text-align: center;
+    font-family: "Baloo", serif;
+    font-weight:300;
+}
+
+
+a {
+    color:black;
+    text-align: center;
+    font-family: "Baloo", serif;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+form {
+    display:flex;
+    flex-direction: column;
+}
+
+textarea {
+    width:300px;
+    height:100px;       
+    min-width: 200px; /* Taille minimale */
+    min-height: 100px; /* Taille minimale */
+    max-width: 100%; /* Taille maximale en pourcentage du conteneur */
+    max-height: 400px; /* Taille maximale */      
+}
+
+.logo-box {
+    height:100px;
+    width:auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.logo-box img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+form input[type="submit"] { /*transforme le curseur en main sur les éléments de ce type*/
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    box-shadow: 3px 3px 10px black;    
+}
+
+.classic-footer {
+    background-color: #F5F5F5;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.grey-background {
+    background-color: #F5F5F5;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    padding-top: 12px;
+    margin-top:12px;
+    width: 100%; /* Prend toute la largeur de la fenêtre */
+    z-index: 1000; /* Pour s'assurer qu'il est au-dessus des autres éléments */
+    bottom: 0;
+    left: 0;
+}
+
+.grey-background section p {
+    font-size:15px;
+}
+
+.footer-line {
+    border: none; /* Supprime la bordure par défaut */
+    border-top: 1px solid #ccc; /* Ajoute une bordure supérieure pour créer la ligne */
+    width: 80%; /* Ligne pleine largeur */
+}
+
+.classic-footer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logos {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logos p {
+    margin:5px;
+    padding:0;
+}
+
+.logos img {
+    width:70%;
+    height:auto;
+}
+
+.media-box {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width:75%;
+
+}
